@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    parameters {
+    choice choices: ['Jaipur, Banglore, Pune, Mumbai, Delhi, Indore'], description: 'Location select', name: 'Rohit'
+    }
     stages{
         stage("A"){
             steps{
