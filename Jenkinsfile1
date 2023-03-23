@@ -4,21 +4,24 @@ pipeline{
     choice choices: ['Jaipur, Banglore, Pune, Mumbai, Delhi, Indore'], description: 'Location select', name: 'Rohit'
     }
     stages{
-        stage("A"){
+        stage("echo a line "){
             steps{
-                echo "========executing A========"
+                echo "========print one line========"
             }
             
         }
-        stage("B"){
+        stage("run a command"){
             steps{
-                echo "========executing A========"
+                sh 'ls'
             }
             
         }
-        stage("C"){
+        stage("run multiple command"){
             steps{
-                echo "========executing A========"
+                sh '''ls
+                pwd
+                whoami
+                echo "hello"'''
             }
             
         }
